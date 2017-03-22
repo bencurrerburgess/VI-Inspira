@@ -1,0 +1,39 @@
+/******************************************************************************************
+
+     _                      _
+    (_) _ __   ____  _ _   (_) _ __  __ _
+    | |( '_ '\/ ,__)( '_'\ | |( '__)/'_' )
+    | || | ) )\__, \| (_) )| || |  ( (_| |
+    (_)(_) (_)(____/|  __/ (_)(_)   \__,_)
+                    | |
+                    (_)
+
+    Inspira Digital Alterations - Main Style
+    =============================================
+
+******************************************************************************************/
+
+h1.warning {
+    display: none !important;
+    opacity: 0;
+}
+main button.save {
+    background-color: #b3b3b3 !important;
+}
+main section.top .a2c {
+    background-color: rgb(217, 28, 92) !important;
+}
+main section.inside header {
+    background-color: rgb(217, 28, 92) !important;
+}
+main section.bottom ul li {
+    background-color: #666666 !important;
+}
+#main>#a2c-save {
+    background-color:  rgb(217, 28, 92);
+}
+#main>#a2c-save>button {
+    background-color:  rgb(217, 28, 92);
+    font-family: Oswald, sans-serif;
+    font-size: 18px;
+}
