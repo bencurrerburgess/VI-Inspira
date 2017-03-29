@@ -37,3 +37,46 @@ main section.bottom ul li {
     font-family: Oswald, sans-serif;
     font-size: 18px;
 }
+#main>#views button {
+    background-color:rgb(102,102,102);
+    font-family: lato,sans-serif;
+}
+#main>#tabs>div{
+    background-color:rgb(102,102,102);
+}
+#main>#tabs>div>div{
+    width:100%;
+    margin:2px 0px 2px 0px;
+    font-family:lato,sans-serif;
+    background-color:rgb(102,102,102);
+    background-image: url(https://cdn.shopify.com/s/files/1/0148/8783/files/White_Arrow.png?15466030359615446190);
+    background-repeat: no-repeat;
+    background-position: 95%;
+}
+#main>#tabs>div>div>.icon.attribute-icon{
+    display:none;
+}
+#main>#renderers {
+    width:80%!important;
+    Height:80% !important;
+}
+    #main>#renderers>canvas.rendering{
+    width:100% !important;
+    Height:auto !important;
+}
+@media (min-width:800px) and (orientation:landscape){
+    #main>#tabs{
+    width:35%;
+    float:right;
+    }
+    #main>#renderers>canvas.rendering{
+    width:100% !important;
+    Height:auto !important;
+    margin:auto auto 20px auto;
+    }
+    #main>#renderers {
+    width:60%!important;
+    Height:50%!important;
+    margin:0 auto 0 0;
+    }
+}
