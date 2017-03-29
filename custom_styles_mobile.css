@@ -64,7 +64,7 @@ main section.bottom ul li {
     width:100% !important;
     Height:auto !important;
 }
-@media (min-width:800px) and (orientation:landscape){
+@media (min-width:50em) and (orientation:landscape){
     #main>#tabs{
     width:35%;
     float:right;
