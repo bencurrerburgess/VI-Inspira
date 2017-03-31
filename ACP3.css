@@ -70,7 +70,6 @@ body{
 #page-sidebar h1 a::before{
     float:left;
     margin-top:-1px;
-    margin-bottom:5px;
     color:#d91c5c;
     width:1.5em;
     height:1.5em;
@@ -78,6 +77,19 @@ body{
     counter-increment:number;
     content:counter(number)" ";
 }
+
+.expando-out{
+    background-image: url('../assets/Artboard 1.png') !important;
+	background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    width: 18px;
+    height: 24px;
+    padding: 10px 24px 0 0;
+    box-sizing: border-box;
+    top: 2px;
+}
+
 .box {
     border-radius: 0;
     -moz-border-radius: 0;
@@ -104,17 +116,81 @@ body{
     vertical-align:middle;
     color:rgba(245, 245, 245, 0.9);
     text-shadow:1px 1px 1px rgba(50, 50, 50, 0.6);
-    font-family:lato, sans-serif;
-   
+    font-family:lato, sans-serif; 
 }
+
 .colour-box{
     width:70px;
     height:70px;
-    display:table;
+    display:inline-table;
 }
+
 .box div[title]{
-    
     float:left;
     margin-bottom:8px;
     margin-right:8px
 }
+
+div.colour-box[style]:after{
+    position: relative;
+    top:23px;
+    display: block;
+    text-align:center;
+    vertical-align:middle;
+    color:rgba(245, 245, 245, 0.9);
+    text-shadow:1px 1px 1px rgba(50, 50, 50, 0.6);
+    font-family:lato, sans-serif;
+}
+/******** COLOUR SWATCH NAME ALLOCATIONS ********/
+div.colour-box[style='background: rgb(255, 236, 0);']:after{content:'Canary Yellow';}
+div.colour-box[style='background: rgb(255, 218, 0);']:after{content:'Sunflower';}
+div.colour-box[style='background: rgb(255, 173, 8);']:after{content:'Mango Orange';}
+div.colour-box[style='background: rgb(255, 103, 0);']:after{content:'Tangerine';}
+div.colour-box[style='background: rgb(237, 57, 21);']:after{content:'Poppy Red';}
+div.colour-box[style='background: rgb(226, 10, 10);']:after{content:'Tomato Red';}
+div.colour-box[style='background: rgb(198, 5, 23);']:after{content:'Cherry Red';}
+div.colour-box[style='background: rgb(168, 9, 5);']:after{content:'Brick Red';}
+div.colour-box[style='background: rgb(153, 0, 51);']:after{content:'Burgundy';}
+div.colour-box[style='background: rgb(255, 192, 192);']:after{content:'Pastel Pink';}
+div.colour-box[style='background: rgb(255, 141, 193);']:after{content:'Baby Pink';}
+div.colour-box[style='background: rgb(232, 0, 127);']:after{content:'Fuchsia Pink';}
+div.colour-box[style='background: rgb(188, 8, 137);']:after{content:'Orchid Pink';}
+div.colour-box[style='background: rgb(142, 45, 140);']:after{content:'Violet';}
+div.colour-box[style='background: rgb(119, 2, 147);']:after{content:'Purple';}
+div.colour-box[style='background: rgb(107, 57, 119);']:after{content:'Plum';}
+div.colour-box[style='background: rgb(83, 86, 135);']:after{content:'Denim Blue';}
+div.colour-box[style='background: rgb(38, 38, 117);']:after{content:'Royal Blue';}
+div.colour-box[style='background: rgb(32, 75, 198);']:after{content:'Marine Blue';}
+div.colour-box[style='background: rgb(91, 144, 239);']:after{content:'Medium Blue';}
+div.colour-box[style='background: rgb(3, 157, 234);']:after{content:'Ocean Blue';}
+div.colour-box[style='background: rgb(26, 188, 232);']:after{content:'Sky Blue';}
+div.colour-box[style='background: rgb(151, 215, 255);']:after{content:'Baby Blue';}
+div.colour-box[style='background: rgb(213, 239, 232);']:after{content:'Duck Egg Blue';}
+div.colour-box[style='background: rgb(149, 178, 183);']:after{content:'Pastel Turquoise';}
+div.colour-box[style='background: rgb(0, 160, 168);']:after{content:'Turquoise';}
+div.colour-box[style='background: rgb(42, 196, 174);']:after{content:'Light Turquoise';}
+div.colour-box[style='background: rgb(157, 234, 210);']:after{content:'Mint';}
+div.colour-box[style='background: rgb(215, 242, 175);']:after{content:'Water Lily';}
+div.colour-box[style='background: rgb(240, 255, 133);']:after{content:'Grape';}
+div.colour-box[style='background: rgb(195, 239, 75);']:after{content:'Lime Green';}
+div.colour-box[style='background: rgb(131, 216, 33);']:after{content:'Leaf Green';}
+div.colour-box[style='background: rgb(22, 178, 84);']:after{content:'Pine Green';}
+div.colour-box[style='background: rgb(0, 137, 39);']:after{content:'Emerald Green';}
+div.colour-box[style='background: rgb(0, 88, 44);']:after{content:'Moss Green';}
+div.colour-box[style='background: rgb(109, 127, 88);']:after{content:'Sage';}
+div.colour-box[style='background: rgb(189, 198, 111);']:after{content:'Wasabi';}
+div.colour-box[style='background: rgb(221, 207, 182);']:after{content:'Silk Grey';}
+div.colour-box[style='background: rgb(255, 244, 215);']:after{content:'Ivory';}
+div.colour-box[style='background: rgb(249, 237, 187);']:after{content:'Sand';}
+div.colour-box[style='background: rgb(216, 109, 14);']:after{content:'Nut Brown';}
+div.colour-box[style='background: rgb(165, 109, 71);']:after{content:'Tree Trunk Brown';}
+div.colour-box[style='background: rgb(96, 57, 21);']:after{content:'Chocolate Brown';}
+div.colour-box[style='background: rgb(236, 232, 228);']:after{content:'Mist Grey';}
+div.colour-box[style='background: rgb(224, 224, 224);']:after{content:'Cloud Grey';}
+div.colour-box[style='background: rgb(205, 209, 201);']:after{content:'Dove Grey';}
+div.colour-box[style='background: rgb(186, 186, 186);']:after{content:'Cement Grey';}
+div.colour-box[style='background: rgb(136, 137, 136);']:after{content:'Basalt Grey';}
+div.colour-box[style='background: rgb(35, 31, 32);']:after{content:'Black';}
+div.colour-box[style='background: rgb(175, 177, 180);']:after{content:'Silver';}
+div.colour-box[style='background: rgb(168, 157, 52);']:after{content:'Gold';}
+div.colour-box[style='background: rgb(255, 255, 255);']:after{content:'White';}
