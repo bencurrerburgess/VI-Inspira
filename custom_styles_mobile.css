@@ -36,6 +36,7 @@ main section.bottom ul li {
     background-color:  rgb(217, 28, 92);
     font-family: Oswald, sans-serif;
     font-size: 18px;
+    width:90%;
 }
 #main>#views button {
     background-color:rgb(102,102,102);
