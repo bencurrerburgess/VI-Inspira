@@ -1,5 +1,4 @@
 /******************************************************************************************
-
      _                      _
     (_) _ __   ____  _ _   (_) _ __  __ _
     | |( '_ '\/ ,__)( '_'\ | |( '__)/'_' )
@@ -7,10 +6,8 @@
     (_)(_) (_)(____/|  __/ (_)(_)   \__,_)
                     | |
                     (_)
-
     Inspira Digital Alterations - Main Style
     =============================================
-
 ******************************************************************************************/
 
 h1.warning {
@@ -28,6 +25,11 @@ main section.inside header {
 }
 main section.bottom ul li {
     background-color: #666666 !important;
+}
+#main{
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+   height: calc(100vh - 90px);
 }
 #main>#a2c-save {
     background-color:  rgb(217, 28, 92);
@@ -50,34 +52,24 @@ main section.bottom ul li {
     margin:2px 0px 2px 0px;
     font-family:lato,sans-serif;
     background-color:rgb(102,102,102);
-    background-image: url(https://cdn.shopify.com/s/files/1/0148/8783/files/White_Arrow.png?15466030359615446190);
+    background-image: url('../assets/white_arrow.png');
     background-repeat: no-repeat;
     background-position: 95%;
 }
+
 #main>#tabs>div>div>.icon.attribute-icon{
     display:none;
 }
-#main>#renderers {
-    width:80%!important;
-    Height:80% !important;
-}
-    #main>#renderers>canvas.rendering{
-    width:100% !important;
-    Height:auto !important;
-}
+
 @media (min-width:50em) and (orientation:landscape){
     #main>#tabs{
     width:35%;
     float:right;
     }
-    #main>#renderers>canvas.rendering{
-    width:100% !important;
-    Height:auto !important;
-    margin:auto auto 20px auto;
-    }
-    #main>#renderers {
-    width:60%!important;
-    Height:50%!important;
-    margin:0 auto 0 0;
-    }
+}
+#current-image-area-container div[data-bind="if: textArea().allow_rotate"]{
+    display:none;
+}
+#pricing-summary{
+    display:none;
 }
