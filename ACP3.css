@@ -9,7 +9,9 @@
     Inspira Digital Alterations - Main Style
     =============================================
 ******************************************************************************************/
-
+html{
+    overflow: scroll !important;
+}
 h1.warning {
     display: none !important;
     opacity: 0;
@@ -80,7 +82,7 @@ body{
 
 .expando-out{
     background-image: url('../assets/Artboard 1.png') !important;
-	background-repeat: no-repeat;
+    background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
     width: 18px;
@@ -142,9 +144,10 @@ div.colour-box[style]:after{
     font-family:lato, sans-serif;
 }
 
-.layer-controls>.resize-handle {
+.layer-controls>.resize-handle, .layer-controls.active>div {
     display:none;
 }
+
 
 /******** COLOUR SWATCH NAME ALLOCATIONS ********/
 div.colour-box[style='background: rgb(255, 236, 0);']:after{content:'Canary Yellow';}
