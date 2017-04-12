@@ -12,10 +12,12 @@
 html{
     overflow: scroll !important;
 }
+
 h1.warning {
     display: none !important;
     opacity: 0;
 }
+
 #add-to-cart {
     background-color: rgb(217, 28, 92);
     background-repeat-x: ;
@@ -53,6 +55,7 @@ h1.warning {
     -webkit-border-image: ;
     color: #fff !important;
 }
+
 article header {
     text-transform: uppercase;
 }
@@ -97,7 +100,7 @@ body{
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     -moz-box-shadow: 0;
-    -webkit-box-shadow: 0;
+    -webkit-box-shadow: none;
     box-shadow: 0;
 }
 
@@ -148,6 +151,51 @@ div.colour-box[style]:after{
     display:none;
 }
 
+table.controls{
+    border:1px solid #d5dbde;
+    margin: 10px auto 10px auto;
+}
+
+.controls td{
+    padding:10px 5px 10px 5px;
+}
+
+.controls button{
+    width:40px;
+    height:40px;
+    background-size:contain;
+    border:none;
+    background-repeat:no-repeat;
+    background-position:0px 0px;
+}
+
+.controls button:hover{
+    outline: 1px dotted #d5dbde;
+}
+
+.controls button:active{
+    background-position:1px 1px;
+}
+
+.controls button.move-up {
+    background-image: url(https://cdn.shopify.com/s/files/1/0148/8783/files/move-up.png?6119506772627799797);
+}
+
+.controls button.move-down {
+    background-image: url(https://cdn.shopify.com/s/files/1/0148/8783/files/move-down.png?6119506772627799797);
+}
+
+.controls button.move-left {
+    background-image: url(https://cdn.shopify.com/s/files/1/0148/8783/files/move-left.png?6119506772627799797);
+}
+
+.controls button.move-right{
+    background-image: url(https://cdn.shopify.com/s/files/1/0148/8783/files/move-right.png?6119506772627799797);
+}
+
+.controls button.reset{
+    background-image: url(https://cdn.shopify.com/s/files/1/0148/8783/files/reset.png?6119506772627799797);
+}
 
 /******** COLOUR SWATCH NAME ALLOCATIONS ********/
 div.colour-box[style='background: rgb(255, 236, 0);']:after{content:'Canary Yellow';}
