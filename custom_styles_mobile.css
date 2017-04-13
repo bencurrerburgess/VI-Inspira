@@ -10,43 +10,35 @@
     =============================================
 ******************************************************************************************/
 
-h1.warning {
-    display: none !important;
-    opacity: 0;
-}
-main button.save {
-    background-color: #b3b3b3 !important;
-}
-main section.top .a2c {
-    background-color: rgb(217, 28, 92) !important;
-}
-main section.inside header {
-    background-color: rgb(217, 28, 92) !important;
-}
-main section.bottom ul li {
-    background-color: #666666 !important;
-}
+/******************************** 
+=============  MAIN  ============ 
+*********************************/
+
+
+h1.warning {display: none !important; opacity: 0; }
+
+main section.top .a2c { background-color: rgb(217, 28, 92) !important;}
+
+main section.inside header { background-color: rgb(217, 28, 92) !important;}
+
+main section.bottom ul li { background-color: #666666 !important;}
+
 #main{
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
-   height: calc(100vh - 90px);
+  height: calc( 100vh - 60px);
 }
-#main>#a2c-save {
-    background-color:  rgb(217, 28, 92);
-}
-#main>#a2c-save>button {
-    background-color:  rgb(217, 28, 92);
-    font-family: Oswald, sans-serif;
-    font-size: 18px;
-    width:90%;
-}
+
 #main>#views button {
     background-color:rgb(102,102,102);
     font-family: lato,sans-serif;
+    margin:0.5em 1em 0.5em 1em;
 }
+
 #main>#tabs>div{
     background-color:rgb(102,102,102);
 }
+
 #main>#tabs>div>div{
     width:100%;
     margin:2px 0px 2px 0px;
@@ -61,15 +53,119 @@ main section.bottom ul li {
     display:none;
 }
 
-@media (min-width:50em) and (orientation:landscape){
-    #main>#tabs{
-    width:35%;
-    float:right;
-    }
+#main>#renderers{
+    width:95% !important;
+    height: auto !important;
 }
+
+#main>#renderers>canvas.rendering{
+    width:100% !important;
+    height:auto !important;
+}
+
+/******************************** 
+=========  ADD TO CART  ======== 
+*********************************/
+
+main button.save { background-color: #b3b3b3 !important;}
+
+#main>#a2c-save {
+    background-color:  rgb(217, 28, 92);
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+}
+
+#main>#a2c-save>button {
+    background-color:  rgb(217, 28, 92);
+    font-family: Oswald, sans-serif;
+    font-size: 18px;
+    width:90%;
+}
+
+#pricing-summary{
+    display:none;
+}
+
+/******************************** 
+======== CONTROL BUTTONS ======== 
+*********************************/
+
 #current-image-area-container div[data-bind="if: textArea().allow_rotate"]{
     display:none;
 }
-#pricing-summary{
-    display:none;
+
+div#current-image-area-container{
+    padding-left:calc( (100% - (3.9em * 5)) / 2 );
+    width: calc( 100% - (100% - (3.9em * 5)) / 2 )
+}
+
+div#current-image-area-container>div{
+    width:2.5em;
+    height:2.5em;
+    margin:0.5em 0.7em 0.5em 0.7em;
+    display:inline-block;
+}
+
+#main>#tabs button{
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-color:white;
+}
+
+button.move-up {background-image: url('../assets/up-arrow.svg');}
+button.move-down {background-image: url('../assets/down-arrow.svg');}
+button.move-left {background-image: url('../assets/left-arrow.svg');}
+button.move-right {background-image: url('../assets/right-arrow.svg');}
+button.reset {background-image: url('../assets/reset-arrow.svg');}
+
+/******************************** 
+========== TABLET VIEW ========== 
+*********************************/
+
+@media (min-width:50em) and (orientation:landscape){
+    
+    #main>#tabs{
+        width:35%;
+        display:inline-block;
+        position:absolute;
+        right:0px;
+    }
+
+    #main>#renderers>canvas.rendering{
+        display:inline-block;
+        position:absolute
+        width:100%;
+    }
+
+    #main>#renderers{
+        margin:0;
+        width:60% !important;
+        height: auto !important;
+    }
+
+    canvas#space-2d.rendering{
+        width:100% !important;
+        height:auto !important; 
+    }
+
+    #main>#views{
+        display:inline-block;
+        position:relative;
+        margin-left: 5%;
+        -ms-transform: translate(50%, 0); /* IE 9 */
+        -webkit-transform: translate(50%, 0); /* Safari */
+        transform: translate(50%, 0);
+    }
+
+    div[data-bind="foreach: v.extra.visibleViews"]{
+        display:block;
+    }
+
 }
