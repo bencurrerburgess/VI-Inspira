@@ -151,6 +151,7 @@ body {counter-reset:number;}
 .colour-panel {
     max-height:150px;
     border:1px solid #d5dbde;
+    width: 100%;
 }
 
 .box div[title]:after{
@@ -168,12 +169,6 @@ body {counter-reset:number;}
     width:60px;
     height:60px;
     display:inline-table;
-}
-
-.box div[title]{
-    float:left;
-    margin-bottom:8px;
-    margin-right:8px
 }
 
 /* ------ colour swatch name allocations ------ */
@@ -257,7 +252,6 @@ table.controls{
     padding: 5px 5px 40px 5px;
 }
 
-
 .controls button[title]:after{
     content: attr(title);
     text-align:center;
@@ -307,19 +301,3 @@ table.controls{
 
 .controls button.reset{background-image: url('../assets/reset-arrow.svg');}
 .controls button.reset:active {background-size:50%;}
-
-/*
-.controls button.move-up:before{
-    content:"Controls only work when text is entered";
-    position:relative;
-    display:inline-block;
-    top:-15px;
-    overflow: visible;
-    width: 210px;
-    height: 1em;
-    text-align: left;
-}
-.controls button.move-up:after{
-    top:30px;
-}
-*/
