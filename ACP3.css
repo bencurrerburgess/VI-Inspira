@@ -8,15 +8,36 @@
                     (_)
     Inspira Digital Alterations - Main Style
     =============================================
-******************************************************************************************/
-html{
-    overflow: scroll !important;
-}
 
-h1.warning {
-    display: none !important;
-    opacity: 0;
-}
+    Contents
+    - General
+    - Cart Button
+    - Side Bar
+            - Drop down boxes
+        - Colour panel
+            - Colour swatch name allocations
+        - Control Icons
+            - Control icon images
+
+******************************************************************************************/
+
+/******************************** 
+==========   GENERAL   ========== 
+*********************************/
+
+html {overflow: scroll !important;}
+
+h1.warning {display: none !important; opacity: 0;}
+
+#product-info {display:none;}
+
+article header {text-transform: uppercase;}
+
+body {counter-reset:number;}
+
+/******************************** 
+========== CART BUTTON ========== 
+*********************************/
 
 #add-to-cart {
     background-color: rgb(217, 28, 92);
@@ -56,16 +77,17 @@ h1.warning {
     color: #fff !important;
 }
 
-article header {
-    text-transform: uppercase;
+#share-via-email .share-via-email-icon,#save-sample .save-sample-icon,#add-to-cart .add-to-cart-icon {
+    -webkit-filter: brightness(100);
+    filter: brightness(100);
 }
 
-body{
-    counter-reset:number;
-}
+/******************************** 
+==========  SIDE BAR  ========== 
+*********************************/
 
 #page-sidebar{
-    width:300px;
+    width:315px;
 }
 
 #page-sidebar h1 a{
@@ -84,7 +106,7 @@ body{
 }
 
 .expando-out{
-    background-image: url('../assets/Artboard 1.png') !important;
+    background-image: url('../assets/pink-arrow.svg') !important;
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
@@ -102,15 +124,33 @@ body{
     -moz-box-shadow: 0;
     -webkit-box-shadow: none;
     box-shadow: 0;
+    margin: 0px 0px 5px 0px;
+    padding: 5px 10px 5px 10px;
 }
 
-#share-via-email .share-via-email-icon,#save-sample .save-sample-icon,#add-to-cart .add-to-cart-icon {
-    -webkit-filter: brightness(100);
-    filter: brightness(100);
+/* ------ dropdown boxes ------ */
+
+.styled-select select, .styled-select{
+    height:30px;
 }
+
+.styled-select{
+    background-image: url('../assets/select-arrow.svg');
+    background-size: 15px 15px;
+    background-position: calc(100% - 5px) 50%;
+}
+
+.styled-select>.selected{
+    vertical-align:middle;
+    height: 30px;
+    line-height:normal;
+}
+
+/* ========== COLOUR PANEL ========== */
 
 .colour-panel {
     max-height:150px;
+    border:1px solid #d5dbde;
 }
 
 .box div[title]:after{
@@ -125,8 +165,8 @@ body{
 }
 
 .colour-box{
-    width:70px;
-    height:70px;
+    width:60px;
+    height:60px;
     display:inline-table;
 }
 
@@ -136,9 +176,11 @@ body{
     margin-right:8px
 }
 
+/* ------ colour swatch name allocations ------ */
+
 div.colour-box[style]:after{
     position: relative;
-    top:23px;
+    top:8px;
     display: block;
     text-align:center;
     vertical-align:middle;
@@ -147,57 +189,6 @@ div.colour-box[style]:after{
     font-family:lato, sans-serif;
 }
 
-.layer-controls>.resize-handle, .layer-controls.active>div, .layer-controls:hover>div {
-    display:none;
-}
-
-table.controls{
-    border:1px solid #d5dbde;
-    margin: 10px auto 10px auto;
-}
-
-.controls td{
-    padding:10px 5px 10px 5px;
-}
-
-.controls button{
-    width:40px;
-    height:40px;
-    background-size:contain;
-    border:none;
-    background-repeat:no-repeat;
-    background-position:0px 0px;
-}
-
-.controls button:hover{
-    outline: 1px dotted #d5dbde;
-}
-
-.controls button:active{
-    background-position:1px 1px;
-}
-
-.controls button.move-up {
-    background-image: url(https://cdn.shopify.com/s/files/1/0148/8783/files/move-up.png?6119506772627799797);
-}
-
-.controls button.move-down {
-    background-image: url(https://cdn.shopify.com/s/files/1/0148/8783/files/move-down.png?6119506772627799797);
-}
-
-.controls button.move-left {
-    background-image: url(https://cdn.shopify.com/s/files/1/0148/8783/files/move-left.png?6119506772627799797);
-}
-
-.controls button.move-right{
-    background-image: url(https://cdn.shopify.com/s/files/1/0148/8783/files/move-right.png?6119506772627799797);
-}
-
-.controls button.reset{
-    background-image: url(https://cdn.shopify.com/s/files/1/0148/8783/files/reset.png?6119506772627799797);
-}
-
-/******** COLOUR SWATCH NAME ALLOCATIONS ********/
 div.colour-box[style='background: rgb(255, 236, 0);']:after{content:'Canary Yellow';}
 div.colour-box[style='background: rgb(255, 218, 0);']:after{content:'Sunflower';}
 div.colour-box[style='background: rgb(255, 173, 8);']:after{content:'Mango Orange';}
@@ -250,3 +241,85 @@ div.colour-box[style='background: rgb(35, 31, 32);']:after{content:'Black';}
 div.colour-box[style='background: rgb(175, 177, 180);']:after{content:'Silver';}
 div.colour-box[style='background: rgb(168, 157, 52);']:after{content:'Gold';}
 div.colour-box[style='background: rgb(255, 255, 255);']:after{content:'White';}
+
+/* ========== CONTROL ICONS ========== */
+
+.layer-controls>.resize-handle, .layer-controls.active>div, .layer-controls:hover>div {
+    display:none;
+}
+
+table.controls{
+    border:1px solid #d5dbde;
+    margin: 10px auto 10px auto;
+}
+
+.controls td{
+    padding: 5px 5px 40px 5px;
+}
+
+
+.controls button[title]:after{
+    content: attr(title);
+    text-align:center;
+    position: relative;
+    top:40px;
+    font-family:lato,sans-serif;
+    color:#666666;
+}
+
+.controls button.reset:after{
+    display:table-cell;
+    text-align:center;
+    position:relative;
+    left: -6px;
+}
+
+.controls button, .controls button.reset{
+    width:40px;
+    height:40px;
+    border:none;
+    background-size:80%;
+    background-repeat:no-repeat;
+    background-position:calc(50%) calc(50%);
+}
+
+.controls button:hover{
+    outline: 1px dotted #d5dbde;
+}
+
+.controls button:focus{
+    outline: 1px dotted #d5dbde;
+}
+
+/* ------ control icon images ------ */
+
+.controls button.move-up {background-image: url('../assets/up-arrow.svg');}
+.controls button.move-up:active {background-position: calc(50%) calc(50% - 2px);}
+
+.controls button.move-down {background-image: url('../assets/down-arrow.svg');}
+.controls button.move-down:active {background-position: calc(50%) calc(50% + 2px);}
+
+.controls button.move-left {background-image: url('../assets/left-arrow.svg');}
+.controls button.move-left:active {background-position: calc(50% - 2px) calc(50%);}
+
+.controls button.move-right{background-image: url('../assets/right-arrow.svg');}
+.controls button.move-right:active {background-position: calc(50% + 2px) calc(50%);}
+
+.controls button.reset{background-image: url('../assets/reset-arrow.svg');}
+.controls button.reset:active {background-size:50%;}
+
+/*
+.controls button.move-up:before{
+    content:"Controls only work when text is entered";
+    position:relative;
+    display:inline-block;
+    top:-15px;
+    overflow: visible;
+    width: 210px;
+    height: 1em;
+    text-align: left;
+}
+.controls button.move-up:after{
+    top:30px;
+}
+*/
