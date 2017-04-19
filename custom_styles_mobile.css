@@ -53,16 +53,6 @@ main section.bottom ul li { background-color: #666666 !important;}
     display:none;
 }
 
-#main>#renderers{
-    width:95% !important;
-    height: auto !important;
-}
-
-#main>#renderers>canvas.rendering{
-    width:100% !important;
-    height:auto !important;
-}
-
 /******************************** 
 =========  ADD TO CART  ======== 
 *********************************/
@@ -132,7 +122,7 @@ button.reset {background-image: url('../assets/reset-arrow.svg');}
 @media (min-width:50em) and (orientation:landscape){
     
     #main>#tabs{
-        width:35%;
+        width:calc( 90% - 400px );
         display:inline-block;
         position:absolute;
         right:0px;
@@ -141,27 +131,16 @@ button.reset {background-image: url('../assets/reset-arrow.svg');}
     #main>#renderers>canvas.rendering{
         display:inline-block;
         position:absolute
-        width:100%;
     }
-
+    
     #main>#renderers{
         margin:0;
-        width:60% !important;
-        height: auto !important;
-    }
-
-    canvas#space-2d.rendering{
-        width:100% !important;
-        height:auto !important; 
     }
 
     #main>#views{
         display:inline-block;
         position:relative;
-        margin-left: 5%;
-        -ms-transform: translate(50%, 0); /* IE 9 */
-        -webkit-transform: translate(50%, 0); /* Safari */
-        transform: translate(50%, 0);
+        margin-left:5%;
     }
 
     div[data-bind="foreach: v.extra.visibleViews"]{
