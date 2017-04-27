@@ -236,6 +236,7 @@ div.colour-box[style='background: rgb(35, 31, 32);']:after{content:'Black';}
 div.colour-box[style='background: rgb(175, 177, 180);']:after{content:'Silver';}
 div.colour-box[style='background: rgb(168, 157, 52);']:after{content:'Gold';}
 div.colour-box[style='background: rgb(255, 255, 255);']:after{content:'White';}
+div.colour-box[style='background: rgb(0, 0, 0);']:after{content:'Black';}
 
 /* ------ Safari ------ */
 div.colour-box[style='background-color: rgb(255, 236, 0); background-position: initial initial; background-repeat: initial initial;']:after{content:'Canary Yellow';}
@@ -290,6 +291,7 @@ div.colour-box[style='background-color: rgb(35, 31, 32); background-position: in
 div.colour-box[style='background-color: rgb(175, 177, 180); background-position: initial initial; background-repeat: initial initial;']:after{content:'Silver';}
 div.colour-box[style='background-color: rgb(168, 157, 52); background-position: initial initial; background-repeat: initial initial;']:after{content:'Gold';}
 div.colour-box[style='background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial;']:after{content:'White';}
+div.colour-box[style='background-color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial;']:after{content:'Black';}
 
 /* ========== CONTROL ICONS ========== */
 
