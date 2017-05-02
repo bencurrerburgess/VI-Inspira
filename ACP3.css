@@ -163,7 +163,7 @@ div.line-limit[data-bind="visible: max_lines != 0, text: 'Max lines: ' + max_lin
     font-family:lato, sans-serif;
 }
 
-div.styled-select:first-of-type:after{
+div.styled-select[data-bind="visible: fonts().length > 1"]:first-of-type:after{
     content:"Text Size:";
     font-size:medium;
     font-family:lato, sans-serif;
