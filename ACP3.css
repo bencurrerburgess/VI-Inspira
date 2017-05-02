@@ -146,6 +146,29 @@ body {counter-reset:number;}
     line-height:normal;
 }
 
+span[data-bind="text: name + ': '"]{
+    font-size:medium;
+    font-family:lato, sans-serif;
+}
+
+div.styled-select:first-of-type{
+    margin:5px 0 25px 0;
+}
+
+div.line-limit[data-bind="visible: max_lines != 0, text: 'Max lines: ' + max_lines"]:after{
+    content:"\a Text Font:";
+    display:block;
+    white-space:pre;
+    font-size:medium;
+    font-family:lato, sans-serif;
+}
+
+div.styled-select:first-of-type:after{
+    content:"Text Size:";
+    font-size:medium;
+    font-family:lato, sans-serif;
+}
+
 /* ========== COLOUR PANEL ========== */
 
 .colour-panel {
