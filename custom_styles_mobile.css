@@ -61,10 +61,14 @@ main button.save { background-color: #b3b3b3 !important;}
 
 #main>#a2c-save {
     background-color:  rgb(217, 28, 92);
-    position: fixed;
-    bottom: 0px;
+    /*position: fixed;
+    bottom: 0px;*/
     width: 100%;
-    left: 0px;
+    /*left: 0px;*/
+}
+
+select{
+    font-size: 16px;
 }
 
 #main>#a2c-save>button {
